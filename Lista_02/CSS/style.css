@@ -4,14 +4,13 @@ body{
 }
 a{
     text-decoration: none;
+    color: rgb(15, 20, 25);
 }
 ul{
     list-style: none;
-    padding-left:0%;
+    padding-left:0px;
 }
-ul.nav-bar-options a{
-    color: rgb(15, 20, 25);
-}
+
 ul.nav-bar-options li{
     padding-left: 20px;
     padding-top: 10px;
@@ -25,7 +24,6 @@ ul.nav-bar-options li:hover{
 
 
 div.perfil-publicacion-options a{
-    color: rgb(15, 20, 25);
     padding-right: 20px;
     padding-left: 20px;
 }
@@ -34,32 +32,18 @@ div.perfil-publicacion-options a:hover{
     border-radius: 20px;
 }
 
-
-ul.perfil-more{
+ul.perfil li{
     padding-left: 20px;
-}
-ul.perfil-more li{
     display: inline;
 }
-ul.perfil-more li:hover{
-    text-decoration: underline;
-}
-
-ul.perfil-statistic{
-    padding-left: 20px;
-}
-ul.perfil-statistic li{
-    display: inline;
-}
-ul.perfil-statistic a{
+ul.perfil a{
     color: rgb(83, 100, 113);
 }
-ul.perfil-statistic span{
-    color: rgb(15, 20, 25);
-    font-weight: bold;
-}
-ul.perfil-statistic li:hover{
+ul.perfil li:hover{
     text-decoration: underline;
+}
+ul.perfil.statistic span{
+    font-weight: bold;
 }
 
 div.perfil-information img{
@@ -84,15 +68,16 @@ a#like:hover{
     color: rgba(249, 24, 128, 1);
 }
 
-div.perfil-information h2,p{
-    color: rgb(15, 20, 25);
-}
+
 span.nickname, span#date-tzeet,ul.perfil-more a{
     color: rgb(83,100,113);
 }
 div.tzeet{
     padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 div.tzeet:hover{
-    background-color: rgba(0,0,0,0.03);
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
 }
