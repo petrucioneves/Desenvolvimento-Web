@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Petrucio">
+    <meta charset="UTF-8">
+    <meta name="description" content="Desenvolvimento para Web">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <title>tzeeter</title>
+</head>
+<body>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-start">
+                <div>
+                    <button type="button" class="btn-close border border-0" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div>
+                
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-fill ">
+                    <div class="px-1 py-1 " id="img">
+                        <img src="../../img/IMG-20220523-WA0046(1).jpg" class="rounded-circle" width="64px" height="64px" alt="">
+                    </div>
+                    <div class="d-flex flex-column  flex-fill pt-4">
+                        <div class="area-de-entrada  d-flex">
+                            <textarea class=" border border-0 flex-fill textarea-home" name="area-de-entrada" id="textarea-modal" cols="30" rows="1" placeholder="O que você estar pensando?"></textarea>
+                            
+                        </div>
+                        <div class="config-reply border-bottom py-3">
+                            <a class="bi bi-globe fw-bold text-primary" href=""> Everyone can reply</a>
+                        </div>
+                        <div class="d-flex py-2 ">
+                            <div class="multimedia flex-fill d-flex flex-row">
+                                <a class="bi bi-image text-muted flex-fill text-center align-self-center" href=""></a>
+                                <a class="bi bi-filetype-pdf text-muted flex-fill text-center align-self-center" href=""></a>
+                                <a class="bi bi-emoji-smile text-muted flex-fill text-center align-self-center" href=""></a>
+                                <a class="bi bi-bar-chart text-muted flex-fill text-center align-self-center" href=""></a>
+                                <a class="bi bi-calendar-event text-muted flex-fill text-center align-self-center" href=""></a>
+                                <a class="bi bi-geo-alt text-muted flex-fill text-center align-self-center" href=""></a>
+                            </div>
+                            <div class="status-envio flex-fill d-flex justify-content-end ">
+                                <div class="contador border-end align-self-center px-2 " id="contador-modal"></div>
+                                <div class="d-flex">
+                                    <a class="bi bi-plus-circle rounded-circle text-muted flex-fill align-self-center mx-2 px-1" href=""></a>
+                                    <button class="botao-enviar-modal btn btn-primary flex-fill align-self-center px-2" >Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container-fluid row">  
+        <nav class="col-1 col-sm-1 col-md-3 col-lg-2 col-xl-2 ps-sm-3 ps-md-5">
+            <img src="../../img/tiziu.png" alt="logo-tiziu" class="d-inline-flex" width="35" height="55">
+            <ul class="nav-bar-options d-flex flex-column ps-1">
+                <li class="d-inline-flex">
+                    <a href="index.html" class="bi bi-house d-md-none "></a>
+                    <a href="index.html" class="bi bi-house d-none d-md-block"> Home</a>
+                </li>  
+                <li class="d-inline-flex">
+                    <a href="" class="bi bi-hash d-md-none"></a>
+                    <a href="" class="bi bi-hash d-none d-md-block"> Explore</a>
+                </li>
+                <li class="d-inline-flex">
+                    <a href="" class="bi bi-bell d-md-none"></a>
+                    <a href="" class="bi bi-bell d-none d-md-block"> Notifications</a>
+                </li>
+                <li class="d-inline-flex">
+                    <a href="" class="bi bi-envelope d-md-none"></a>
+                    <a href="" class="bi bi-envelope d-none d-md-block"> Messages</a>
+                </li>
+                <li class="d-inline-flex">
+                    <a href="" class="bi bi-bookmark d-md-none"></a>
+                    <a href="" class="bi bi-bookmark d-none d-md-block"> Bookmarks</a>
+                </li>
+                <li class="d-inline-flex">
+                    <a href="" class="bi bi-list d-md-none"></a>
+                    <a href="" class="bi bi-list d-none d-md-block"> Lists</a>
+                </li>
+                <li class="d-inline-flex">
+                    <a href="profile.html" class="bi bi-person d-md-none"></a>
+                    <a href="profile.html" class="bi bi-person d-none d-md-block"> Profile</a>
+                </li>
+                <li class="d-inline-flex">
+                    <a href="" class="bi bi-three-dots d-md-none"></a>
+                    <a href="" class="bi bi-three-dots d-none d-md-block"> More</a>
+                </li> 
+            </ul>
+            <button id="button-nav-m" type="button" class="btn btn-primary bi bi-chat rounded-circle d-md-none pe-xs-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+            <button id="button-nav" type="button" class="btn btn-primary d-none d-md-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Tweet</button>
+            
+        </nav>
+        <div class="col-11 col-sm-11 col-md-9 col-lg-7 col-xl-7">
+            <div class="perfil border-start border-end">
+                <div class="perfil-user border-bottom">
+                    <div class="perfil-information ps-4">
+                        
+                        <div class="d-flex px-2">
+                            <img class="p-1" src="../../img/IMG-20220523-WA0046(1).jpg" alt="perfil-photo" height="100" width="100"> 
+                            <button type="button" class="perfil-user ms-auto align-self-end p-1 btn btn-primary">Edit profile</button>
+                        </div>
+                        
+                        <h2>Petrucio Neves</h2>
+                        <h4 class="nickname">@petrucioNeves</h4>
+                        <p>Computer Engineer - Bachelor's Degree - 8th semester student at the Federal University of Ceara - UFC, Quixada campus</p>
+            
+                    </div>
+                    <div class="perfil more ps-4">
+                        <a class="bi bi-geo-alt" href=""> Quixada - CE</a>
+                        <a class="bi bi-calendar3" href=""> Joined August 2022</a>
+                    </div>
+                    <div class="perfil statistic ps-4">
+                        <a href=""><span> 10</span> following</a>
+                        <a href=""><span> 20</span> followers</a>
+                    </div>
+                    <div class="perfil-publicacion-options">
+                        <a href="" >Tweets</a>
+                        <a href="">Tweets & replies</a>
+                        <a href="">Media</a>
+                        <a href="">Likes</a>
+                    </div>
+                </div>
+                
+                <div class="tzeet border-bottom px-3">
+                    <p >Marcos Vinicius <span class="nickname">@RelampagoMarquinhos</span> <span id="date-tzeet">Oct 21, 2022</span></p>
+                    <p>Que horas vamos fazer o exercicio de Web?</p>
+                    <div class="tzeet-actions px-4">
+                        <a id="reply" href=""><i class="bi bi-chat px-1 py-1"></i> 200</a>
+                        <a id="retzeet" href=""><i class="bi bi-arrow-repeat px-1 py-1"></i> 100</a>
+                        <a id="like" href=""><i class="bi bi-heart px-1 py-1"></i> 120</a>
+                        <a id="share" href=""><i class="bi bi-upload px-1 py-1"></i></a>
+                    </div>
+
+                </div>
+                <div class="tzeet border-bottom px-3">
+                    <p >Petrucio Neves <span class="nickname">@petrucioNeves</span> <span id="date-tzeet">Oct 22, 2022</span></p>
+                    <p>Já até enviei, já estou terminando a segunda</p>
+                    <div class="tzeet-actions px-4">
+                        <a id="reply" href=""><i class="bi bi-chat px-1 py-1"></i> 200</a>
+                        <a id="retzeet" href=""><i class="bi bi-arrow-repeat px-1 py-1"></i> 100</a>
+                        <a id="like" href=""><i class="bi bi-heart px-1 py-1"></i> 120</a>
+                        <a id="share" href=""><i class="bi bi-upload px-1 py-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 d-none d-lg-block d-xl-block d-xxl-block ">
+            <div class="grid">
+                <div class="input-group mb-3 ">
+                    <button  class="btn btn-outline-secondary bi bi-search border-end-0 border-secondary" type="button" id="button-addon1"></button>
+                    <input id="input-addon1" type="text" class="form-control border-start-0 border-secondary" placeholder="Search tzeet" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                  </div>
+                <div class="card border-0">
+                    <div class="card-header border-0">
+                        Talvez você curta    
+                    </div>
+                    <ul class="list-group list-group-flush ">
+                      <li class="list-group-item d-flex justify-content-between border-0">
+                        <img src="../../img/man.png" alt="foto de perfil" width="48" height="48">
+                        <a class="align-self-center" href="">Marcos</a>
+                        <button class="btn btn-primary align-self-center" type="button">Seguir</button>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between border-0">
+                        <img src="../../img/man_1.png" alt="foto de perfil" width="48" height="48">
+                        <a class="align-self-center" href="">Kaio</a>
+                        <button class="btn btn-primary align-self-center" type="button">Seguir</button>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between border-0">
+                        <img src="../../img/man_2.png" alt="foto de perfil" width="48" height="48">
+                        <a class="align-self-center" href="">Pedro</a>
+                        <button class="btn btn-primary align-self-center" type="button">Seguir</button>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="">Mostrar mais ...</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="../JavaScript/script.js" defer></script>
+</body>
+</html>
