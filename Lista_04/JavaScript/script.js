@@ -1,18 +1,22 @@
-const text = document.getElementById("textarea-home");
+
 const textModal = document.getElementById("textarea-modal");
-const buttonTweetHome = document.querySelector('.botao-enviar');
+const text = document.getElementById("textarea-home");
 const buttonTweetModal = document.querySelector('.botao-enviar-modal');
-buttonTweetHome.disabled = true;
-buttonTweetModal.disabled = true;
+const buttonTweetHome = document.querySelector('.botao-enviar');
+
+
+
 let tamMax = 140;
 
-text.addEventListener('keyup', ()=>{
-    let divCont = document.getElementById("contador");
-    contagem(divCont, tamMax, text);
-    textColor(tamMax, text, divCont);
-    statusButton(tamMax, text, buttonTweetHome);
-    scrollHeight(text);
-});
+if(text!=null){
+    text.addEventListener('keyup', ()=>{
+        let divCont = document.getElementById("contador");
+        contagem(divCont, tamMax, text);
+        textColor(tamMax, text, divCont);
+        statusButton(tamMax, text, buttonTweetHome);
+        scrollHeight(text);
+    });
+}
 textModal.addEventListener('keyup', ()=>{
     let divCont = document.getElementById("contador-modal");
     contagem(divCont, tamMax, textModal);
